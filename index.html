@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A fun multilingual dictionary for kids in English, French, and Spanish!" />
+  <title>Kids Dictionary 📚 – English · Français · Español</title>
+
+  <!-- Google Fonts: Nunito for a friendly, round look -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ══════════════════════════════════════════════
+       HEADER
+  ═══════════════════════════════════════════════ -->
+  <header class="app-header" role="banner">
+
+    <div class="header-top">
+      <span class="header-stars" aria-hidden="true">🌟</span>
+      <h1 id="app-title">Kids Dictionary</h1>
+      <span class="header-stars" aria-hidden="true">🌟</span>
+    </div>
+
+    <p id="app-subtitle">Learn words in 3 languages!</p>
+
+    <!-- Language picker -->
+    <div class="lang-picker" role="group" aria-label="Choose your language">
+      <span id="lang-label">My language:</span>
+      <button class="lang-btn active" data-lang="en" aria-label="Switch to English">🇬🇧 English</button>
+      <button class="lang-btn"        data-lang="fr" aria-label="Switch to French">🇫🇷 Français</button>
+      <button class="lang-btn"        data-lang="es" aria-label="Switch to Spanish">🇪🇸 Español</button>
+    </div>
+
+    <!-- Search -->
+    <div class="search-wrap" role="search">
+      <span class="search-icon" aria-hidden="true">🔍</span>
+      <input
+        type="search"
+        id="search-input"
+        autocomplete="off"
+        autocorrect="off"
+        autocapitalize="off"
+        spellcheck="false"
+        placeholder="Search for a word..."
+        aria-label="Search words"
+      />
+      <button id="random-btn" type="button">Random Word! 🎲</button>
+    </div>
+
+  </header>
+
+  <!-- ══════════════════════════════════════════════
+       WORD OF THE DAY
+  ═══════════════════════════════════════════════ -->
+  <div id="word-of-day" role="region" aria-label="Word of the Day" tabindex="0"></div>
+
+  <!-- ══════════════════════════════════════════════
+       MAIN
+  ═══════════════════════════════════════════════ -->
+  <main class="app-main" role="main">
+
+    <!-- Category filter buttons -->
+    <nav id="category-list" aria-label="Word categories"></nav>
+
+    <!-- Word cards grid -->
+    <section id="word-grid" aria-label="Word list"></section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════════
+       WORD DETAIL MODAL
+  ═══════════════════════════════════════════════ -->
+  <div
+    id="word-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modal-word-title"
+    aria-hidden="true"
+  >
+    <div id="modal-content" tabindex="-1">
+      <!-- Filled dynamically by app.js -->
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════ -->
+  <footer class="app-footer" role="contentinfo">
+    Made with <span>❤️</span> for curious kids everywhere &nbsp;·&nbsp; 100 words &nbsp;·&nbsp;
+    🇬🇧 English &nbsp; 🇫🇷 Français &nbsp; 🇪🇸 Español
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
