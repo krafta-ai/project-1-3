@@ -1,0 +1,10 @@
+# Krafta loop state files
+PROMPT.md
+STATE.md
+DONE.md
+BLOCKED.md
+WAITING.md
+RESPONSE.md
+CHANGE_REQUEST.md
+CHANGES.md
+.changes-archive/
